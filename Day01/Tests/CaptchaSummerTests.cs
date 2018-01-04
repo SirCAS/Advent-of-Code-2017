@@ -6,56 +6,33 @@ namespace Day01.Tests
     [TestFixture]
     public class CaptchaSummerTests
     {
+        [TestCase("1122", 3)]
+        [TestCase("1111", 4)]
+        [TestCase("1234", 0)]
+        [TestCase("91212129", 9)]
         [Test]
-        public void FirstMatchTest()
+        public void SumTest(string input, int expectedResult)
         {
-            // 1. Arrange
-            const string input = "1122";
-
-            // 2. Act
+            // Act
             var sum = CaptchaSummer.Sum(input);
 
-            // 3. Assert
-            Assert.AreEqual(3, sum);
+            // Assert
+            Assert.AreEqual(expectedResult, sum);
         }
 
+        [TestCase("1212", 6)]
+        [TestCase("1221", 0)]
+        [TestCase("123425", 4)]
+        [TestCase("123123", 12)]
+        [TestCase("12131415", 4)]
         [Test]
-        public void OneMatchTest()
+        public void SumHalfWayTest(string input, double expectedResult)
         {
-            // 1. Arrange
-            const string input = "1111";
+            // Act
+            var sum = CaptchaSummer.SumHalfway(input);
 
-            // 2. Act
-            var sum = CaptchaSummer.Sum(input);
-
-            // 3. Assert
-            Assert.AreEqual(4, sum);
-        }
-    
-        [Test]
-        public void ZeroMatchTest()
-        {
-            // 1. Arrange
-            const string input = "1234";
-
-            // 2. Act
-            var sum = CaptchaSummer.Sum(input);
-
-            // 3. Assert
-            Assert.AreEqual(0, sum);
-        }
-
-            [Test]
-        public void LastAndFirstMatchTest()
-        {
-            // 1. Arrange
-            const string input = "91212129";
-
-            // 2. Act
-            var sum = CaptchaSummer.Sum(input);
-
-            // 3. Assert
-            Assert.AreEqual(9, sum);
+            // Assert
+            Assert.AreEqual(expectedResult, sum);
         }
     }
 }
