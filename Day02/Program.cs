@@ -10,8 +10,9 @@ namespace Day02
             string[] input = File.ReadAllLines("input.txt");
 
             var checksum = SpreadsheetChecksumCalculator.CheckSum(input);
+            var sum = SpreadsheetChecksumCalculator.Sum(input);
 
-            Console.WriteLine($"Part1: Checksum is {checksum}");
+            Console.WriteLine($"Checksum is {checksum} and sum is {sum}");
         }
     }
 }
