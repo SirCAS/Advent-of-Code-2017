@@ -70,15 +70,5 @@ namespace Day03
 
             return Math.Abs(x) + Math.Abs(y);
         }
-
-        // Right, Up, Left, Down
-        /*1, 1, 2, 2
-        3, 3, 4, 4
-        5, 5, 6, 6
-        7, 7, 8, 8*/
     }
 }
-
-
-// 25 => 5x5
-// 9 => 3x3
