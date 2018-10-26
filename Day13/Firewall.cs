@@ -11,7 +11,7 @@ namespace Day13
             this.Layers = layers;
             this.Caught = new List<int>();
         }
-        
+
         public void TickLayers()
         {
             foreach (var l in Layers)
@@ -33,6 +33,9 @@ namespace Day13
             {
                 Caught.Add(PlayerPos);
             }
+
+
+            //(wait + pos) % (2 * (height - 1)) == 0
 
             TickLayers();
 
